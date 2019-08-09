@@ -1,0 +1,222 @@
+@import "../src/style.scss";
+.blz {
+  background: url("./index.png") no-repeat -224px -67px;
+  background-size: 375px 455px;
+  width: 23px;
+  height: 20px;
+}
+.gsz {
+  background: url("./index.png") no-repeat -318px -68px;
+  background-size: 375px 455px;
+  width: 23px;
+  height: 20px;
+}
+.zbsc {
+  background: url("./index.png") no-repeat -131px -4px;
+  background-size: 375px 455px;
+  width: 19px;
+  height: 22px;
+}
+.tyf {
+  background: url("./index.png") no-repeat -37px -67px;
+  background-size: 375px 455px;
+  width: 20px;
+  height: 20px;
+}
+.xrzq {
+  background: url("./index.png") no-repeat -319px -5px;
+  background-size: 375px 455px;
+  width: 20px;
+  height: 21px;
+}
+.whz {
+  background: url("./index.png") no-repeat -128px -66px;
+  background-size: 375px 455px;
+  width: 24px;
+  height: 20px;
+}
+.trz {
+  background: url("./index.png") no-repeat -34px -5px;
+  background-size: 375px 455px;
+  width: 26px;
+  height: 21px;
+}
+.zs {
+  background: url("./index.png") no-repeat -222px -4px;
+  background-size: 375px 455px;
+  width: 24px;
+  height: 24px;
+}
+.gzh {
+  background: url("./index.png") no-repeat 0 -418px;
+  background-size: 375px 455px;
+  width: 24px;
+  height: 20px;
+}
+.bbjs {
+  background: url("./version-icon.png") no-repeat;
+  width: 24px;
+  height: 20px;
+}
+.isDropClass {
+  transform: rotateZ(180deg);
+}
+
+.home-top {
+  width: 100%;
+  height: 45px;
+  .logo_cont {
+    background: url("./index.png") no-repeat 0 -308px;
+    background-size: 375px 455px;
+    width: 30px;
+    height: 30px;
+    //上下
+    margin: 0px 12px;
+  }
+  .download {
+    background: url("./index.png") no-repeat -59px -309px;
+    background-size: 375px 455px;
+    width: 60px;
+    height: 24px;
+    position: relative;
+    left: 45%;
+  }
+}
+.home-bottom {
+  ul {
+    width: 100%;
+    height: 42px;
+    li {
+      width: 125px;
+      height: 100%;
+      a {
+        line-height: 42px;
+        border-bottom: 2px solid transparent;
+
+        transition: all 0.5s;
+      }
+      a:hover {
+        border-bottom: 2px solid white;
+      }
+    }
+  }
+}
+.content {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .content_wrap {
+    .slide {
+      width: 100%;
+      //   overflow-x: auto;
+      .slide-views {
+        transform: translateX(-375px);
+        transition: all 0.5s ease-in-out;
+        width: 5 * 375px;
+        display: inline-block;
+        overflow-y: hidden;
+
+        li {
+          display: inline-block;
+        }
+      }
+      .slide-controller {
+        position: relative;
+        top: -2.7rem;
+        left: -24px;
+        text-align: right;
+        li {
+          display: inline-block;
+          background: white;
+          width: 0.6538rem;
+          height: 0.6538rem;
+          border-radius: 0.1538rem;
+          margin: 0 0.3846rem;
+          transition: all 0.2s ease-in-out;
+        }
+        .btnImage {
+          background: #4b67af;
+          transform: scale(1.5);
+        }
+        .btnleft,
+        .btnright {
+          border-width: 0;
+          border-style: none;
+          border-color: none;
+          border-image: none;
+          position: absolute;
+          width: 100px;
+          height: 165px;
+          background: rgba(146, 135, 177, 0.5);
+        }
+        .btnleft {
+          left: 25px;
+          top: -136px;
+        }
+        .btnright {
+          left: 299px;
+          top: -136px;
+        }
+      }
+    }
+  }
+}
+.home_nav {
+  margin-bottom: 20px;
+  .entry-list {
+    transition: all 0.3s;
+    text-align: left;
+    flex-wrap: wrap;
+    height: 210px;
+    overflow: hidden;
+    li {
+      width: 90px;
+      height: 70px;
+      padding: 10px 0px;
+      margin-right: 2px;
+      position: relative;
+      text-align: center;
+      flex-direction: column;
+      div {
+        display: block;
+      }
+      span {
+        display: block;
+        width: 100%;
+        height: 17.6px;
+        text-align: center;
+      }
+      i:after {
+        content: "";
+        position: absolute;
+        top: 0%;
+        left: 100%;
+        display: block;
+        height: 100%;
+        width: 1px;
+        background: lightblue;
+      }
+    }
+  }
+  .dropView {
+    height: 70px;
+    overflow: hidden;
+  }
+  .entry-btn {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .drop-icon {
+      transition: all 0.2s ease-in-out;
+      display: block;
+      background: url("./index.png") no-repeat -141px -232px;
+      background-size: 375px 455px;
+      width: 10px;
+      height: 10px;
+    }
+  }
+}

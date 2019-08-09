@@ -1,0 +1,173 @@
+* {
+  //padding向内挤压而非向外
+  box-sizing: border-box;
+  outline: none;
+  margin: 0px 0px;
+  padding: 0px 0px;
+  list-style: none;
+  text-decoration: none;
+}
+
+html {
+  font-size: 13px;
+  overflow: auto;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  widows: 375px;
+  background: #f1f1f1;
+  overflow: auto;
+}
+
+//colors
+$colors: (
+  "primary": #db9e3f,
+  "white": #fff,
+  "black": #000,
+  "dark": #222,
+  "grey": #999,
+  "light": #f9f9f9,
+  "dark-1": #343440,
+  "home-top": #333333,
+  "grey-home-top": #666666
+);
+@each $colorKey, $color in $colors {
+  .text-#{$colorKey} {
+    color: $color;
+  }
+  .bg-#{$colorKey} {
+    background-color: $color;
+  }
+}
+//text
+@each $var in (left, center, right) {
+  .text-#{$var} {
+    text-align: $var;
+  }
+}
+//font size
+$base-font-size: 13px;
+$font-sizes: (
+  xs: 0.7692,
+  sm: 0.9231,
+  md: 1,
+  //13px
+    lg: 1.0769,
+  //14px
+    xl: 1.2308,
+  //16px
+);
+@each $sizeKey, $size in $font-sizes {
+  .fs-#{$sizeKey} {
+    font-size: $size;
+  }
+}
+//flex
+.d-flex {
+  display: flex;
+}
+$flex-jc: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  between: space-between,
+  around: space-around
+);
+@each $key, $value in $flex-jc {
+  .jc-#{$key} {
+    justify-content: $value;
+  }
+}
+$flex-ai: (
+  start: flex-start,
+  end: flex-end,
+  center: center,
+  stretch: stretch
+);
+@each $key, $value in $flex-ai {
+  .ai-#{$key} {
+    align-items: $value;
+  }
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-grow-1 {
+  flex-grow: 1;
+}
+.flex-wrap{
+  flex-wrap: wrap;
+}
+//spacing
+//.mt-1=>margin to
+$spacing-types: (
+  m: margin,
+  p: padding
+);
+$spacing-directions: (
+  t: top,
+  r: right,
+  l: left,
+  b: bottom
+);
+$spacing-base-sizes: 1rem;
+$spacing-sizes: (
+  0: 0,
+  1: 0.25,
+  2: 0.5,
+  3: 1,
+  4: 1.2,
+  5: 1.5,
+  6: 3
+);
+@each $typekey, $type in $spacing-types {
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typekey}-#{$sizeKey} {
+      #{$type}: $size * $spacing-base-sizes;
+    }
+  }
+  //mt-1
+  @each $directionkey, $direction in $spacing-directions {
+    @each $sizeKey, $size in $spacing-sizes {
+      .#{$typekey}#{$directionkey}-#{$sizeKey} {
+        #{$type}-#{$direction}: $size * $spacing-base-sizes;
+      }
+    }
+  }
+  //mx
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typekey}x-#{$sizeKey} {
+      #{$type}-left: $size * $spacing-base-sizes;
+      #{$type}-right: $size * $spacing-base-sizes;
+    }
+  }
+  @each $sizeKey, $size in $spacing-sizes {
+    .#{$typekey}y-#{$sizeKey} {
+      #{$type}-top: $size * $spacing-base-sizes;
+      #{$type}-bottom: $size * $spacing-base-sizes;
+    }
+  }
+}
+//image
+.image {
+  width: 375px;
+  height: 12.6923 * $base-font-size;
+}
+@font-face {
+  font-family: "iconfont"; /* project id 1172360 */
+  src: url("//at.alicdn.com/t/font_1172360_xykrpjb8bg.eot");
+  src: url("//at.alicdn.com/t/font_1172360_xykrpjb8bg.eot?#iefix") format("embedded-opentype"),
+    url("//at.alicdn.com/t/font_1172360_xykrpjb8bg.woff2") format("woff2"),
+    url("//at.alicdn.com/t/font_1172360_xykrpjb8bg.woff") format("woff"),
+    url("//at.alicdn.com/t/font_1172360_xykrpjb8bg.ttf") format("truetype"),
+    url("//at.alicdn.com/t/font_1172360_xykrpjb8bg.svg#iconfont") format("svg");
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
