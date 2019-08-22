@@ -1,0 +1,15 @@
+{
+  "name": "server-oh-my-fiction-master",
+  "version": "1.0.0",
+  "description": "",
+  "main": "selector.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "res":"nodemon response.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
